@@ -30,7 +30,7 @@
 
 - 서로서로의 기능들이 필요하다면 전부 다 끌어와서 쓰는 것이다.
 # 스프링 동작 원리
-![alt text](image.png)
+![alt text](image-1.png)
 1. 애플리케이션으로 들어오는 모든 Request를 받는 부분. Request를 실제로 처리할 Controller에게 전달하고 그 결과값을 받아서 View에 전달하여 적절한 응답을 생성할 수 있도록 흐름을 제어 한다.
 2. HandlerMapping는 Request URL에 따라 각각 어떤 Controller가 실제로 처리할 것인지 찾아주는 역할을 한다.
 3. controller는 Request를 직접 처리한 후 그 결과를 다시 DispatcherServelt에 돌려준다.
@@ -38,5 +38,4 @@
 5. ViewResolver는 View 관련 정보를 갖고 클라이언트에게 포워딩할 실제 View 파일을 찾아주는 역할을 한다.
 6. view는 Controller가 처리한 결과값을 보여줄 View를 생성한다. 
 - 위와 같이 기본적으로 MVC2의구조를 따른다.
- ![alt text](image-1.png)
- 
+![alt text](image.png)
