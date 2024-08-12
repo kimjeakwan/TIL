@@ -10,20 +10,16 @@ View를 계속 만드는 ListView의 단점을 보완한 겁니다.그리고 이
 1. notifyDataSetChanged
 아이템 변경(데이터가 업데이트 되었지만 위치는 변하지 않았을 때), 구조적 변경(아이템간에 삽입, 삭제, 이동이 일어났을 때)에 사용한다.
 
-2. notifyItemChanged
-notifyItemChanged(int position, Object payload)
+2. notifyItemChanged(int position, Object payload)
 position 위치의 아이템이 변경되었다고 파라미터를 통해 알려줄 수 있다.
 
-3. notifyItemInserted
-notifyItemInserted(int position)
+3. notifyItemInserted(int position)
 position 위치에 아이템이 추가되었다는 뜻이다.
 
-4. notifyItemMoved
-notifyItemMoved(int fromPostion, int toPosition)
+4. notifyItemMoved(int fromPostion, int toPosition)
 인덱스 fromPosition 아이템이 toPosition으로 이동하였다.
 
-5. notifyItemRangeChanged
-notifyItemRangeChanged(int positionStart, int itemCount, Object payload)
+5. notifyItemRangeChanged(int positionStart, int itemCount, Object payload)
 positionStart부터 itemCount개까지 범위에서 변경이 일어났다.
 
 ## 장/단점
