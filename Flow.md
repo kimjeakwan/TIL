@@ -5,8 +5,11 @@ flow 는 코루틴으로 cold stream(데이터 가 내부에 생산된다), 으�
 구독자 생기면 실행하고 데이터 공유가 되지않는다. 만약 서로 다른 구독자가 생기면 서로 다른 값을 받을 수 있다. 이것이 
 유니캐스팅 이다 
 문제점: cold Stream(소비자가 소비를 시작 할 때 데이터 생산 )은 데이터초기화가 될수 있어 Hot Stream( 외부에서 데이터가 생성된다) 인 stateflow( 상태를 유지하고 상태가 변경될 때마다 이를 수집기로 내보내도록 설계되었습니다. )를 제공한다
-
-
+StateFlow:stateflow는 업데이트가 가능한 데이터값을 가지는 state라는 것을 가지고 collector에게 emit하는 인터페이스입니다.여러 collector들에 읳해서 계속해서 값이 관찰될 수 있습니다.
+stateflow에서 흘러나오는 아이템들을 collect하는 것 은 구독자 라고 부른다.
+![alt text](image.png)
+asStateflow
+:정말로 Readonly한 stateflow를 만들수 있다.
 
 리액티브 프로그래밍 데이터스트림을 사용한다
 
